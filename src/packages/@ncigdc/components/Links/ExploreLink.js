@@ -1,3 +1,5 @@
+import React from 'react';
+
 import { makeFilter } from '@ncigdc/utils/filters';
 import { makeListLink } from './utils';
 
@@ -18,5 +20,15 @@ export const ExploreMutationsLink = makeListLink({
 
 export default makeListLink({
   children: 'exploration',
+  dropDownElements: [
+    {
+      description: 'Explore Open Data',
+      pathname: '',
+    },
+    {
+      description: 'Explore Controlled & Open Data',
+      pathname: '?controlled',
+    },
+  ],
   pathname: '/exploration',
 });
